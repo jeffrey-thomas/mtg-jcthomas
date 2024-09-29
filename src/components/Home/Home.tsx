@@ -6,6 +6,7 @@ import { GoogleSignInButton } from '../Auth/GoogleSignInButton/GoogleSignInButto
 
 import './Home.css';
 
+//react component for home page
 export const Home= () => {
 
   return (

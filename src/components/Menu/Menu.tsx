@@ -6,7 +6,7 @@ import { SignOutLink } from "../Auth/SignOutLink";
 import { GoogleSignInButton } from "../Auth/GoogleSignInButton/GoogleSignInButton";
 import { Link } from "react-router-dom";
 
-
+//React component for the navigation menu
 export const Menu = () => {
 
     const [open, setOpen] = useState(false);

@@ -12,6 +12,7 @@ export namespace Firebase{
 
     export const db = getFirestore(app)
 
+    //Sign the user in with a pop-up window
     export const signIn = async()=>{
         //Sign in through Firebase
         const provider = new GoogleAuthProvider();
@@ -22,21 +23,17 @@ export namespace Firebase{
         )
     }
 
+    //sign the user out
     export const signOut = async()=>{
         return auth.signOut()
     }
 
+    //check if the user is signed in
     export const isSignedIn = ()=>{
         return auth.currentUser !== null;
     }
 
-    export const getToken = async()=>{
-        const token = await auth.currentUser?.getIdToken()
-        if(!token)
-            throw new Error('Unable to get Google authentication token.')
-        return token
-    }
-
+    //A react hook that lets a component observe the user's state
     export const useUser = ()=>{
         const [user, setUser] = useState<User|null>(null)
         useEffect(()=>{
@@ -47,6 +44,7 @@ export namespace Firebase{
         return user
     }
 
+    //A React hook that lets a component monitor the authentication state
     export const useAuth = ():[boolean, User |null]=>{
 
         const [ authorized, setAuthorized ] = useState(false)

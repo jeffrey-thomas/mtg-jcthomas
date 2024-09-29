@@ -4,6 +4,7 @@ import React from "react";
 
 type SignOutLinkProps = { path?:string};
 
+//Button to sign out
 export const SignOutLink = ({path='/'}:SignOutLinkProps)=>{
 
     const nav = useNavigate();

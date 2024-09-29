@@ -2,6 +2,8 @@ import React from "react"
 
 import './About.css'
 
+
+//About page React component
 export const About=()=>{
 
   return (

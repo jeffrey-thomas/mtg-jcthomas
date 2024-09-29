@@ -7,6 +7,7 @@ interface CheckAuthProps {
     onUnauthorized?: ReactNode
 }
 
+//React component that changes what is displayed based on if the use is signed in or not
 export const AuthCheck = (props: CheckAuthProps) => {
     
     const [authorized, setAuthorized] = useState(false)

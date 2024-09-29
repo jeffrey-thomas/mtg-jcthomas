@@ -15,6 +15,7 @@ export interface CardListProps{
     remove:(card:string)=>void
 }
 
+//React component that displays the cards in a deck and controls to change them
 export const CardList = ({deck,cards, increment, decrement, remove}:CardListProps)=>{
 
     return(

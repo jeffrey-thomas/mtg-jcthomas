@@ -19,6 +19,7 @@ interface AddCardFormState{
     qty:number
 }
 
+//Dialog to Add a card to the deck
 export const AddCard = (props:AddCardProps) =>{
 
     const methods = useForm<AddCardFormState>({});
@@ -26,6 +27,7 @@ export const AddCard = (props:AddCardProps) =>{
 
     const user = Firebase.useUser()
     
+    //onSubmit - Add the card to the deck
     const onSubmit = async(data:AddCardFormState) => {
 
         if(!user)

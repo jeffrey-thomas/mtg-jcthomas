@@ -1,5 +1,6 @@
 import React from "react"
 
+//React component for the app logo - allows recoloring with css
 export const Logo = ()=>{
 
 

@@ -5,6 +5,7 @@ import { Menu } from "../Menu"
 
 import './Layout.css'
 
+//React component for the basic layout of the app
 export const Layout = ()=>{
 
 

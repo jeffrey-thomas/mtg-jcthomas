@@ -8,8 +8,10 @@ export interface searchResult {
     data: Card[] | null
 }
 
+//Contains methods for calling the Scryfall API
 export const Scryfall = {
 
+    //Get a single card's information from its id
     getById: async (id: string): Promise<Card | null> => {
         let response = await fetch(`${base_uri}/multiverse/${id}`);
         if (!response.ok)
@@ -19,6 +21,7 @@ export const Scryfall = {
         return json;
     },
 
+    //Get the information for a group of cards from their ids
     getByIds: async (ids: number[]): Promise<Card[] | null> => {
 
         let body: { identifiers: { multiverse_id: number }[] } = { identifiers: [] }
@@ -42,6 +45,7 @@ export const Scryfall = {
         return json['data'];
     },
 
+    //Query the API and retrieve a list of matching cards
     search: async (name: string, set?: string): Promise<searchResult> => {
 
         let request: RequestInit = {

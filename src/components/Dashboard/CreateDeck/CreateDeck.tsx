@@ -20,6 +20,7 @@ interface CreateDeckFormState{
     name:string,
 }
 
+//Dialog for creating a new deck
 export const CreateDeck = (props:CreateDeckProps) =>{
 
     const methods = useForm<CreateDeckFormState>({});

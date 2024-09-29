@@ -14,6 +14,7 @@ export namespace Firestore {
         cards?: CardCollection
     }
 
+    //Get all of the decks a user has created from Firestore
     const getUsersDecks = async (uid: string) => {
         const docsSnap = await getDocs(collection(Firebase.db, `users/${uid}/decks`));
         let result = {}
@@ -23,6 +24,7 @@ export namespace Firestore {
         return result;
     }
 
+    //A react hook that lets a component make use of data from firestore
     export const useDeckData = () => {
 
         const [data, setData] = useState<DeckData>({ status: 'pending' })
@@ -49,6 +51,7 @@ export namespace Firestore {
             retrieveData()
         }, [user])
 
+        //Create a new deck in the firestore database
         const createDeck = async (name: string) => {
             const docRef = doc(Firebase.db, "users", user!.uid, "decks", name)
 
@@ -66,6 +69,7 @@ export namespace Firestore {
             setData(newData)
         }
 
+        //Delete a deck from the firestore database
         const deleteDeck = async (name: string) => {
             const docRef = doc(Firebase.db, "users", user!.uid, "decks", name)
 
@@ -79,6 +83,7 @@ export namespace Firestore {
             setData(newData)
         }
 
+        //rename a deck in the firestore database
         const renameDeck = async (previous: string, newName: string) => {
             const oldRef = doc(Firebase.db, "users", user!.uid, "decks", previous)
             const snapshot = await getDoc(oldRef)
@@ -102,6 +107,7 @@ export namespace Firestore {
             }
         }
 
+        //Add a card to a deck in the database
         const addCard = async (deck: string, card: Card, qty:number) => {
             const ref = doc(Firebase.db, "users", user!.uid, "decks", deck)
             const snapshot = await getDoc(ref)
@@ -123,6 +129,7 @@ export namespace Firestore {
             }
         }
 
+        //increment the quantity of a card in the database
         const increment = async (deck: string, card: string) => {
             const ref = doc(Firebase.db, "users", user!.uid, "decks", deck)
             const snapshot = await getDoc(ref)
@@ -143,6 +150,7 @@ export namespace Firestore {
             }
         }
 
+        //decrement the quantoty of card in database - delete if qty is now zero
         const decrement = async (deck: string, card: string) => {
             const ref = doc(Firebase.db, "users", user!.uid, "decks", deck)
             const snapshot = await getDoc(ref)
@@ -169,7 +177,8 @@ export namespace Firestore {
                 setData(newData)
             }
         }
-            
+        
+        //remove a card from a deck in the database
         const remove = async (deck: string, card: string) => {
             const ref = doc(Firebase.db, "users", user!.uid, "decks", deck)
             const snapshot = await getDoc(ref)
@@ -203,6 +212,7 @@ export namespace Firestore {
         }
     }
 
+    //Retrieve all of the information needed for the dashboard
     const getData = async (uid: string): Promise<DeckData> => {
         const docRef = doc(Firebase.db, "users", uid);
         const snapshot = await getDoc(docRef);

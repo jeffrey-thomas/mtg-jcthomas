@@ -8,6 +8,7 @@ type FormInputType = 'text' | 'number' | 'password';
 
 type FormInputProps = { field:string, type?:FormInputType} & React.ComponentProps<'input'>;
 
+//React component combining input and its label
 export const FormInput=({field, children, ...props}:PropsWithChildren<FormInputProps>) => {
 
     // const {field, ...fieldProps } = props;

@@ -21,6 +21,7 @@ interface RenameDeckFormState{
     name:string,
 }
 
+//Dialog for renaming a deck
 export const RenameDeck = (props:RenameDeckProps) =>{
 
     const methods = useForm<RenameDeckFormState>({});

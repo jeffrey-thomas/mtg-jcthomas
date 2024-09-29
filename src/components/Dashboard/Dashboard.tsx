@@ -12,6 +12,7 @@ import { Search } from "./Search";
 import { Card } from "../../Data/Card";
 import { AuthCheck } from "../Auth/AuthCheck/AuthCheck";
 
+//React component for the app's dashboard
 export const Dashboard = () => {
 
     const fs = Firestore.useDeckData()
@@ -27,34 +28,39 @@ export const Dashboard = () => {
         setDeckSelection(event.target.value);
     };
 
-    //toggle dialog
+    //toggle dialog visibilities
     const toggleCreate = () => { setCreateOpen(!createOpen) }
     const toggleRename = () => { setRenameOpen(!renameOpen) }
     const toggleFind = () => { setFindOpen(!findOpen) }
 
-
+    //Respond to create deck dialog submission
     const handleCreate = async (name: string) => {
         await fs.createDeck(name)
         setDeckSelection(name)
     }
 
+    //Respond to rename dialog submission
     const handleRename = async (newName: string) => {
         await fs.renameDeck(deckSelection, newName)
         setDeckSelection(newName)
     }
 
+    //respond to clicking on the '+' next to a card
     const handleIncrement = async (card: string) => {
         await fs.increment(deckSelection, card)
     }
 
+    //respond to clicking on the '-' next to a card
     const handleDecrement = async (card: string) => {
         await fs.decrement(deckSelection, card)
     }
 
+    //respond to removing a card
     const handleRemove = async (card: string) => {
         await fs.remove(deckSelection, card)
     }
 
+    //respond to addCard dialog submission
     const handleAddCard = async (card:Card, qty:number)=>{
         await fs.addCard(deckSelection, card, qty)
     }

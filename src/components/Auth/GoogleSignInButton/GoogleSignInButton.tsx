@@ -5,6 +5,7 @@ import React from "react"
 
 import './GoogleSignInButton.css'
 
+//Button to authenticate with Google Firebase
 export const GoogleSignInButton = () => {
 
     // const dispatch = useDispatch<AppDispatch>()

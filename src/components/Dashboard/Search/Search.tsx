@@ -33,6 +33,7 @@ export interface searchResult {
 
 const emptyResult = { has_more: false, total_cards: null, data: null }
 
+//Dialog to search Scryfall for a card to add to the deck
 export const Search = (props: SearchProps) => {
 
     const methods = useForm<SearchState>({});

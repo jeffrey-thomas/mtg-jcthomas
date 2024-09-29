@@ -9,8 +9,6 @@ To start a test server:
     - run the command 'npm run dev'
     - open http://localhost:5173/ in a browser
 
-[Software Demo Video](http://youtube.link.goes.here)
-
 # Web Pages
 
 There are three pages for this app: Home, About, and Dashboard. Links in a navigation menu at the top of the page allow the user to navigate between them. They are actually three components rendered in a Single Page Application. If the user has not signed in then the link to the Dashboard is not displayed but is replaced with a signin button. If the user is signed in then there is a sign out link.
