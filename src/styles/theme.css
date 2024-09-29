@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root{
+    --primary-color:#1d3549;;
+    --secondary-color:#dbe4f0;
+    --accent1-color:#ffdca0;
+    --accent2-color:#0e1b25;
+    --heading-font:Merriweather, serif;
+    --paragraph-font:Quicksand, sans-serif;
+    --nav-background-color:#152837;;
+    --nav-link-color: #eeeeee;
+    --nav-hover-link-color:#ffffff;
+    --nav-hover-background-color:#24435c;
+        --rt-color-white: #fff;
+        --rt-color-dark: #222;
+        --rt-color-success: #8dc572;
+        --rt-color-error: #be6464;
+        --rt-color-warning: #f0ad4e;
+        --rt-color-info: #337ab7;
+        --rt-opacity: 1;
+        --rt-transition-show-delay: 0.15s;
+        --rt-transition-closing-delay: 0.15s;
+}

@@ -1,0 +1,12 @@
+.deck-controls{
+    display:flex;
+    justify-content: space-around;
+    border-bottom:1px solid var(--primary-color);
+    border-top:1px solid var(--primary-color);
+    padding: 0.1rem 0 0.1rem;
+}
+
+.deck-controls label, .deck-controls div{
+    display:flex;
+    gap:1rem;
+}

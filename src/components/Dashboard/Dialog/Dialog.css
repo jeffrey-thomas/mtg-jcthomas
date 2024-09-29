@@ -1,0 +1,40 @@
+.dialog-exterior{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,0.5);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.dialog-interior{
+    background-color:var(--secondary-color);
+    display:flex;
+    flex-direction:column;
+    padding-top:2rem;
+    width:80%;
+    height:80%;
+    align-items: center;
+    overflow:auto;
+}
+    
+.dialog-interior input{
+        padding:5px;
+}
+    
+.dialog-interior img{
+        width:25%;
+        height:auto
+}
+
+.dialog-interior form{
+    width:80%;
+    height:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}

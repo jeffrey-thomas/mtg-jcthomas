@@ -1,0 +1,44 @@
+#menu{
+    background-color: var(--nav-background-color);
+}
+
+
+nav{
+    display:none;
+    background-color:var(--nav-background-color);
+    justify-content:space-around;
+}
+
+nav.open{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+nav a, #menu{
+    display:block;
+    padding:0.5rem;
+    color:var(--nav-link-color);
+    text-decoration: none;
+    font-size:1.2rem;
+}
+
+nav.open a{
+    width:100%;
+}
+
+nav a:hover, #menu:hover{
+    background-color: var(--nav-hover-background-color);
+}
+
+@media screen and (min-width: 500px){
+        
+    nav, nav.open{
+        display:flex;
+        flex-direction:row;
+    }
+
+    #menu{
+        display:none;
+    }
+}

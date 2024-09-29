@@ -1,0 +1,66 @@
+export interface Card {
+    id:string,
+    multiverse_ids:number[],
+    lang:string,
+
+    card_faces?:CardFace[],
+    cmc:number,
+    color_identity:string[],
+    colors:string[],
+    color_indicator:string[],
+    hand_modifier?:string,
+    keywords:string[]
+    layout:string,
+    life_modifier?:string,
+    loyalty?:string,
+    mana_cost?:string,
+    name:string,
+    oracle_text?:string,
+    oversized:boolean,
+    power?:string,
+    produced_mana?:string[],
+    toughness?:string,
+    type_line:string,
+
+    artist?:string,
+    collector_number:string,
+    digital:boolean,
+    flavor_text?:string,
+    image_uris:{
+        small:string,
+        normal:string,
+        large:string,
+        art_crop:string,
+        border_crop:string,
+        png:string,
+    },
+    rarity:string,
+    set:string,
+    set_name:string,
+}
+
+export interface CardFace{
+    artist?:string,
+    cmc?:number,
+    color_indicator?:string[],
+    colors?:string[],
+    flavor_text?:string,
+    illustration_id?:string,
+    image_uris?:{
+        small?:string,
+        normal?:string,
+        large?:string,
+        art_crop?:string,
+        border_crop?:string,
+        png?:string
+    },
+    layout?:string,
+    loyalty?:string,
+    mana_cost:string,
+    name:string,
+    oracle_text?:string,
+    power?:string,
+    toughness?:string,
+    type_line?:string,
+    watermark?:string
+}

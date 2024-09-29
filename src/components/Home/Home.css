@@ -1,0 +1,15 @@
+.home .Logo{
+    width:80%;
+    min-width:200px;
+    height:auto;
+    max-width:400px;
+    fill:var(--primary-color);
+}
+
+.home{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:2rem;
+}

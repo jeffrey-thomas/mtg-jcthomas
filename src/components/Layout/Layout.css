@@ -1,0 +1,44 @@
+#app{
+    height:100vh;
+    display:grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+header{
+    flex:none;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    padding-top:1rem;
+}
+
+header .Logo{
+    width:60px;
+    margin:auto;
+    fill:var(--accent1-color);
+    grid-column-start:2;
+}
+
+#title{
+    display:grid;
+    grid-template-columns: auto min-content max-content auto;
+    align-items: center;
+}
+
+header, footer{
+    background-color: var(--primary-color);
+    color:var(--accent1-color);
+    text-align:center;
+}
+
+footer{
+    padding:1rem;
+    text-align:center;
+    flex:none;
+}
+
+main{
+    padding:2rem;
+    color:var(--accent2-color);
+    min-width:200px;
+}
